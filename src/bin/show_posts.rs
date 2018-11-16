@@ -29,9 +29,9 @@ fn search(
         query = query.filter(posts::title.eq(x))
     }
 
-    if let Some(x) =  body {
+    if let Some(x) = body {
         query = query.filter(posts::body.eq(x))
-    }
+     }
 
     query.load::<Post>(conn)
 }
